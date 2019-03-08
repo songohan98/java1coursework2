@@ -1,6 +1,12 @@
 package uk.ac.ucl.patient;
 
+import java.util.ArrayList;
+
 public class Patient {
+
+    public ArrayList<String> patient;
+
+
 
     private String ID;
     private String BIRTHDATE;
@@ -59,14 +65,15 @@ public class Patient {
 
     public void setID(String ID) {
         this.ID = ID;
+        patient.add(ID);
     }
 
-    public String getBIRTHDATE() {
-        return BIRTHDATE;
+    public String getBIRTHDATE() { return BIRTHDATE;
     }
 
     public void setBIRTHDATE(String BIRTHDATE) {
         this.BIRTHDATE = BIRTHDATE;
+        patient.add(BIRTHDATE);
     }
 
     public String getDEATHDATE() {
@@ -75,6 +82,7 @@ public class Patient {
 
     public void setDEATHDATE(String DEATHDATE) {
         this.DEATHDATE = DEATHDATE;
+        patient.add(DEATHDATE);
     }
 
     public String getSSN() {
@@ -83,6 +91,7 @@ public class Patient {
 
     public void setSSN(String SSN) {
         this.SSN = SSN;
+        patient.add(SSN);
     }
 
     public String getDRIVERS() {
@@ -91,6 +100,7 @@ public class Patient {
 
     public void setDRIVERS(String DRIVERS) {
         this.DRIVERS = DRIVERS;
+        patient.add(DRIVERS);
     }
 
     public String getPASSPORT() {
@@ -99,6 +109,7 @@ public class Patient {
 
     public void setPASSPORT(String PASSPORT) {
         this.PASSPORT = PASSPORT;
+        patient.add(PASSPORT);
     }
 
     public String getPREFIX() {
@@ -107,6 +118,7 @@ public class Patient {
 
     public void setPREFIX(String PREFIX) {
         this.PREFIX = PREFIX;
+        patient.add(PREFIX);
     }
 
     public String getFIRST() {
@@ -115,6 +127,7 @@ public class Patient {
 
     public void setFIRST(String FIRST) {
         this.FIRST = FIRST;
+        patient.add(FIRST);
     }
 
     public String getLAST() {
@@ -123,14 +136,15 @@ public class Patient {
 
     public void setLAST(String LAST) {
         this.LAST = LAST;
+        patient.add(LAST);
     }
 
-    public String getSUFFIX() {
-        return SUFFIX;
+    public String getSUFFIX() { return SUFFIX;
     }
 
     public void setSUFFIX(String SUFFIX) {
         this.SUFFIX = SUFFIX;
+        patient.add(SUFFIX);
     }
 
     public String getMAIDEN() {
@@ -139,6 +153,7 @@ public class Patient {
 
     public void setMAIDEN(String MAIDEN) {
         this.MAIDEN = MAIDEN;
+        patient.add(MAIDEN);
     }
 
     public String getMARITAL() {
@@ -147,6 +162,7 @@ public class Patient {
 
     public void setMARITAL(String MARITAL) {
         this.MARITAL = MARITAL;
+        patient.add(MARITAL);
     }
 
     public String getRACE() {
@@ -155,6 +171,7 @@ public class Patient {
 
     public void setRACE(String RACE) {
         this.RACE = RACE;
+        patient.add(RACE);
     }
 
     public String getETHNICITY() {
@@ -163,6 +180,7 @@ public class Patient {
 
     public void setETHNICITY(String ETHNICITY) {
         this.ETHNICITY = ETHNICITY;
+        patient.add(ETHNICITY);
     }
 
     public String getGENDER() {
@@ -171,6 +189,7 @@ public class Patient {
 
     public void setGENDER(String GENDER) {
         this.GENDER = GENDER;
+        patient.add(GENDER);
     }
 
     public String getBIRTHPLACE() {
@@ -179,6 +198,7 @@ public class Patient {
 
     public void setBIRTHPLACE(String BIRTHPLACE) {
         this.BIRTHPLACE = BIRTHPLACE;
+        patient.add(BIRTHPLACE);
     }
 
     public String getADDRESS() {
@@ -187,6 +207,7 @@ public class Patient {
 
     public void setADDRESS(String ADDRESS) {
         this.ADDRESS = ADDRESS;
+        patient.add(ADDRESS);
     }
 
     public String getCITY() {
@@ -195,6 +216,7 @@ public class Patient {
 
     public void setCITY(String CITY) {
         this.CITY = CITY;
+        patient.add(CITY);
     }
 
     public String getSTATE() {
@@ -203,6 +225,7 @@ public class Patient {
 
     public void setSTATE(String STATE) {
         this.STATE = STATE;
+        patient.add(STATE);
     }
 
     public String getZIP() {
@@ -211,5 +234,6 @@ public class Patient {
 
     public void setZIP(String ZIP) {
         this.ZIP = ZIP;
+        patient.add(ZIP);
     }
 }
