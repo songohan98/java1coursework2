@@ -2,7 +2,7 @@ package uk.ac.ucl.patient;
 
 import java.util.ArrayList;
 
-public class Patient {
+public class Patient<String> {
 
     public ArrayList<String> patient;
 
