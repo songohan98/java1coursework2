@@ -2,13 +2,13 @@ package uk.ac.ucl.patient;
 
 import java.util.ArrayList;
 
-public class Patient<String> {
+public class Patient<String>{
 
-    public ArrayList<String> patient;
+    ArrayList<String> patient =new ArrayList<String>();
 
 
 
-    private String ID;
+    private String ID ;
     private String BIRTHDATE;
     private String DEATHDATE;
     private String SSN;
