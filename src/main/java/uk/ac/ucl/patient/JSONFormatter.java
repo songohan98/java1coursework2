@@ -15,6 +15,7 @@ public class JSONFormatter
 
 
 //changes
+//        str.append("{Patient:\n{");
         str.append("\t\t{\n");
         str.append("\t\t\"ID\" : \""+ patient.get(0) + "\",\n");
         str.append("\t\t\"BIRTHDATE\" : \""+ patient.get(1) +"\",\n");
@@ -37,10 +38,10 @@ public class JSONFormatter
         str.append("\t\t\"STATE\" : \""+patient.get(18)  +"\",\n");
         str.append("\t\t\"ZIP\" : \""+ patient.get(19) +"\"\n");
         str.append("\t\t}");
+//        str.append("}\n");
 
     }
 
-//    {
 //    public void getID()
 //    {
 //        System.out.println("ID : "+ patient.get(0));
@@ -121,7 +122,6 @@ public class JSONFormatter
 //    public void getZIP()
 //    {
 //        System.out.println("ZIP : "+ patient.get(19) );
-//    }
 //    }
 
 
