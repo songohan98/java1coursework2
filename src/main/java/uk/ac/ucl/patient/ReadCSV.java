@@ -25,6 +25,7 @@ public class ReadCSV {
 
         try {
             String line;
+            br = new BufferedReader(new FileReader(file));
             //int j=0; test counter
 
             while ((line = br.readLine()) != null) {
