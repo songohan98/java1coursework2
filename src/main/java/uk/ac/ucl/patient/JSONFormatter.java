@@ -133,6 +133,13 @@ public class JSONFormatter
 
     }
 
+    public String storeAll()
+    {
+        String s = null;
+        s = String.valueOf(str);
+        return s;
+    }
+
 }
 
 

@@ -47,6 +47,19 @@ public class Model {
         System.out.print("\n\t]\n}");
     }
 
+    public String storeSinglePatient(int PatientNo)
+    {
+        int index = PatientNo-1;
+        String s="";
+
+        holdNewPaient.patient = holdData.get(index).patient;
+        JSONFormatter printRec = new JSONFormatter(holdNewPaient.patient);
+        s+=printRec.storeAll();
+
+        return s;
+
+    }
+
     public void printAllPatient()
     {
         System.out.print("{\n\t\"patients\":[");
@@ -63,6 +76,27 @@ public class Model {
             }
         }
         System.out.print("\n\t]\n}");
+    }
+
+    public String storetextAllPatient()
+    {
+        String a =null;
+        a="{\n\t\"patients\":[";
+        for (int j = 0; j < holdData.size(); j++) {
+            holdNewPaient.patient = holdData.get(j).patient;
+            JSONFormatter printRec = new JSONFormatter(holdNewPaient.patient);
+            a += printRec.storeAll();
+            if(holdData.size()>1)
+            {
+                if(j!=holdData.size()-1)
+                {
+                    a+=",\n";
+                }
+            }
+        }
+        a+="\n\t]\n}";
+
+        return a;
     }
 
         public void printAllID()
@@ -178,6 +212,19 @@ public class Model {
                 }
             }
         }
+
+        public ArrayList<String> storeListAllFirst()
+        {
+            ArrayList<String> list = new ArrayList<String>();
+            for (int j = 0; j < holdData.size(); j++) {
+                holdNewPaient.patient = holdData.get(j).patient;
+                list.add(String.valueOf(holdData.get(j).patient.get(7)));
+
+
+            }
+            return list;
+        }
+
         public void printAllLAST()
         {
             for (int j = 0; j < holdData.size(); j++) {
@@ -192,6 +239,19 @@ public class Model {
                 }
             }
         }
+        public ArrayList<String> storeListAllLast()
+        {
+            ArrayList<String> list = new ArrayList<String>();
+            for (int j = 0; j < holdData.size(); j++) {
+                holdNewPaient.patient = holdData.get(j).patient;
+                list.add(String.valueOf(holdData.get(j).patient.get(8)));
+
+
+            }
+            return list;
+        }
+
+
         public void printAllSUFFIX()
         {
             for (int j = 0; j < holdData.size(); j++) {
@@ -346,5 +406,90 @@ public class Model {
                 }
             }
         }
+        public void printAllAge()
+        {
+            for (int j = 0; j < holdData.size(); j++) {
+                int lastrecordedyear;
+                holdNewPaient.patient = holdData.get(j).patient;
+                String objecttoString = ""+holdData.get(j).patient.get(1);
+                String sr1[]=objecttoString.split("-");
+                int birthyear=Integer.parseInt(sr1[0]);
+
+                String s =""+holdData.get(j).patient.get(2);
+
+                if(!s.equals(""))
+                {
+                String objecttoString2 =""+holdData.get(j).patient.get(2);
+                String sr2[]=objecttoString2.split("-");
+                lastrecordedyear=Integer.parseInt(sr2[0]);
+                }
+                else{
+                    lastrecordedyear=2019;
+                }
+                int age = lastrecordedyear - birthyear;
+
+                System.out.print("\"AGE\" : \""+age+"\"");
+                if(holdData.size()>1)
+                {
+                    if(j!=holdData.size()-1)
+                    {
+                        System.out.print(",\n");
+                    }
+                }
+            }
+
+
+
+        }
+
+        public ArrayList<Integer> storeAllAge()
+        {
+            ArrayList<Integer> agelist = new ArrayList<Integer>();
+            for (int j = 0; j < holdData.size(); j++) {
+                int lastrecordedyear;
+                holdNewPaient.patient = holdData.get(j).patient;
+                String objecttoString = ""+holdData.get(j).patient.get(1);
+                String sr1[]=objecttoString.split("-");
+                int birthyear=Integer.parseInt(sr1[0]);
+
+                String s =""+holdData.get(j).patient.get(2);
+
+                if(!s.equals(""))
+                {
+                    String objecttoString2 =""+holdData.get(j).patient.get(2);
+                    String sr2[]=objecttoString2.split("-");
+                    lastrecordedyear=Integer.parseInt(sr2[0]);
+                }
+                else{
+                    lastrecordedyear=2019;
+                }
+                int age = lastrecordedyear - birthyear;
+                agelist.add(age);
+
+            }
+            return agelist;
+        }
+
+        public ArrayList<Integer> storeAllBirthyear()
+        {
+            ArrayList<Integer> birthyearlist = new ArrayList<Integer>();
+            for (int j = 0; j < holdData.size(); j++) {
+                int lastrecordedyear;
+                holdNewPaient.patient = holdData.get(j).patient;
+                String objecttoString = ""+holdData.get(j).patient.get(1);
+                String sr1[]=objecttoString.split("-");
+                int birthyear=Integer.parseInt(sr1[0]);
+
+                birthyearlist.add(birthyear);
+
+            }
+            return birthyearlist;
+        }
+
+        public void showGUI()
+        {
+            new PatientFinder("");
+        }
+
 
 }
