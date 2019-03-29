@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>Patient Data App</title>
+</head>
+<body>
+<div class="main">
+    <h1>Search</h1>
+    <h4>Can search by single or multiple fields</h4>
+    <form method="POST" action="/runsearchmultiple.html">
+        <!--<h2>__________________________________________</h2>-->
+        <div style="float:left;">
+        <h3>By Age Range</h3>
+
+            <h4>Starting range:</h4>
+            <input type="text" name="searchRangeStart" placeholder="Enter intial age"/>
+        </div>
+        <div style="float:left;">
+            <h4>*ending range cannot be less than starting range</h4>
+            <h4>Ending range:</h4>
+            <input type="text" name="searchRangeEnd" placeholder="Enter final range"/>
+        </div>
+        <div style="clear:both;">&nbsp;</div>
+        <h3>By Age</h3>
+        <input type="text" name="searchByAge" placeholder="Enter Age"/>
+        <!--<h2>___________________________________________</h2>-->
+        <h3>By Gender</h3>
+        <input type="text" name="searchGender" placeholder="Enter gender"/>
+        <!--<h2>___________________________________________</h2>-->
+        <h3>By City</h3>
+        <input type="text" name="searchCity" placeholder="Enter city"/>
+        <!--<h2>___________________________________________</h2>-->
+        <h3>By Ethnicity</h3>
+        <input type="text" name="searchEthnicity" placeholder="Enter Ethnicity"/>
+        <!--<h2>___________________________________________</h2>-->
+        <h3>By Race</h3>
+        <input type="text" name="searchRace" placeholder="Enter Race"/>
+        <h2>___________________________________________</h2>
+        <input type="submit" value="Search"/>
+    </form>
+</div>
+</body>
+</html>
